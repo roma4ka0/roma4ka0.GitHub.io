@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Document</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body >
+<header class="wrapper">
+<nav class="header-nav">
+<ul class="ul">
+<li>
+<img class="logo"src="img\icon\Logo.png" alt="logo">
+</li>
+</ul>
+<div>
+<div class="search-header">
+<input type="text" placeholder="Search">
+<img src="img\lupa.svg" alt="Search">
+</div>
+<ul class="header-menu ul">
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Company Profile</a></li>
+<li><a href="index2.html">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">R & D</a></li>
+<li><a href="index4.html">Contact</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<aside class="return-header wrapperTwo bg-color-tomatoOne">
+<img src="img\strelca.svg">
+<p>Return to all tomatoes</p>
+</aside>
+<main class="wrapperTwo bg-color-tomatoOne bg-image-tomato" id="app">
+<section class="main-tomatoOne-description">
+<div>
+<h2>{{product.title}}</h2>
+<h2>{{product.text}}</h2>
+<p>*****</p>
+<section class="lotoTomato-txt">
+<img src="img\pomedoru\pomedorZnachok.svg">
+<p>Very high yield and excellent fruits quality!</p>
+</section>
+<section class="description-container">
+<h3>CHARACTERISTICS</h3>
+<div class="bandTomatoOne"></div>
+<p>{{product.desc}}</p>
+</section>
+<section class="description-ul-container">
+<h3>Plant</h3>
+<div class="bandTomatoOne"></div>
+<ul>
+<li><span>Strong vigor that provides good
+leaf
+coverage.</span></li>
+<li><span>Very high productivity with good
+fruit
+setting.</span></li>
+<li><span>Early matured variety.</span></li>
+</ul>
+</section>
+<section class="description-ul-container wrap">
+<h3>Fruit</h3>
+<div class="bandTomatoOne"></div>
+<ul>
+<li><span>Long shelf life on plant and post
+harvest.</span></li>
+<li><span>Nice shiny attractive deep red
+color.</span></li>
+<li><span>Average fruit size: 140 – 160
+grams.</span></li>
+</ul>
+</section>
+</div>
+<section class="wrap">
+<img :src="'img/Lemons/'+product.image">
+<div class="containPDFButton">
+<a href="#" class="ButtonPDF" v-if="!btnVisible" @click.prevent="addToLemn(product.id)">
+<img src="img\fael.svg" alt="">
+<p>Add to Cart</p></a>
+<a href="index4.html" class="ButtonPDF" v-if="btnVisible">
+<img src="img\fael.svg">
+<p>Go to Cart</p></a>
+</div>
+<section class="description-ul-container">
+<h3>Cycle</h3>
+<div class="bandTomatoOne"></div>
+<ul>
+<li><span>Spring</span></li>
+<li><span>Fall</span></li>
+<li><span>Winter</span></li>
+</ul>
+</section>
+<section class="description-ul-container">
+<h3>Color</h3>
+<div class="bandTomatoOne"></div>
+<p>Red</p>
+</section>
+</main>
+<footer>
+<section class="footer-container">
+<nav class="footer-nav">
+<ul class="ul">
+<li><a href="#">PROFILE</a></li>
+<li><a href="#">MANAGEMENT</a></li>
+<li><a href="index2.html">PRODUCTS</a></li>
+<li><a href="#">R&D</a></li>
+<li><a href="#">LINKS</a></li>
+<li><a href="#">SITEMAP</a></li>
+<li><a href="index4.html">CONTACT</a></li>
+</ul>
+</nav>
+<div class="footer-social">
+<a href="#"><img src="img\FooterNav\Ico_in.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_inst.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_tube.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_tw.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_fb.svg"></a>
+</div>
+</section>
+<section class="footer-final-container">
+<p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+</section>
+</footer>
+</body>
+</html>

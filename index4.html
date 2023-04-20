@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Document</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+<header class="wrapper">
+<nav class="header-nav">
+<ul class="ul">
+<li>
+<img class="logo"src="img\icon\Logo.png" alt="logo">
+</li>
+</ul>
+<div>
+<div class="search-header">
+<input type="text" placeholder="Search">
+<img src="img\lupa.svg" alt="Search">
+</div>
+<ul class="header-menu ul">
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Company Profile</a></li>
+<li><a href="index2.html">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">R & D</a></li>
+<li><a href="index4.html">Contact</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<img class="BannerContactUs" src="img\logo.svg">
+<main class="ContactMain wrapperTwo" id="app">
+<h1>Contact us</h1>
+<p>*****</p>
+<table v-if="lemn!=''" class="ContactTable">
+<tr>
+<th>Photo</th>
+<th>Product Name </th>
+<th>Description</th>
+<th>Options</th>
+</tr>
+<tr v-for="l in lemn">
+<td><img class="ImgTableContact" :src="'img/Lemons/'+l.image"></td>
+<td>{{l.title}}</td>
+<td>{{l.desc}}</td>
+<td><a href="#" @click.prevent="removeFromLemn(l.id)">X</a></td>
+</tr>
+</table>
+<form action="index4.html" @submit.prevent="makeOrder()" v-if="order==0" class="ContactMainFormContainer">
+<section>
+<section>
+<label for="text">Name *</label>
+<input required type="text" v-model="contactFields.name">
+</section>
+<section>
+<label for="text">Company Name</label>
+<input type="text" v-model="contactFields.Company">
+</section>
+<section>
+<label for="text">Position</label>
+<input type="text" v-model="contactFields.Position">
+</section>
+<section>
+<label for="text">Sity</label>
+<input type="text" v-model="contactFields.City">
+</section>
+<section>
+<label for="text">Country</label>
+<input type="text" v-model="contactFields.Country">
+</section>
+<section>
+<label for="text">Telephone</label>
+<input type="text" v-model="contactFields.Telephone">
+</section>
+<section>
+<label for="text">Email *</label>
+<input type="text" v-model="contactFields.Email">
+</section>
+</section>
+<section>
+<section>
+<label for="text">You are a</label>
+<select class="selectyour" v-model="contactFields.select">
+<option selected value="your">seed producer</option>
+</select>
+</section>
+<section>
+<label for="text">If other, please specify</label>
+<input type="text">
+</section>
+<section>
+<label for="text">If other, please specify</label>
+<textarea name="text" id="" cols="30" rows="10"></textarea>
+</section>
+<section class="contactuscaptcha">
+<label for="text">Please type this code</label>
+<section>
+<img src="img\code.svg" alt="Captcha">
+<input type="text">
+<button>Send Message</button>
+</section>
+</section>
+</section>
+</form>
+</main>
+<aside class="aside-footer-contactus">
+<section>
+<h3>Our Address</h3>
+<div></div>
+<p>AGRIDERA Seeds & Agriculture Ltd.</p>
+<p>P.O Box 103,</p>
+<p>Gedera 70750, Israel.</p>
+<p>Telephone: <span>+972 8 944 9222</span></p>
+</section>
+</aside>
+<footer>
+<section class="footer-container">
+<nav class="footer-nav">
+<ul class="ul" v>
+<li><a href="#">PROFILE</a></li>
+<li><a href="#">MANAGEMENT</a></li>
+<li><a href="index2.html">PRODUCTS</a></li>
+<li><a href="#">LINKS</a></li>
+<li><a href="#">SITEMAP</a></li>
+<li><a href="index4.html">CONTACT</a></li>
+</ul>
+</nav>
+<div class="footer-social">
+<a href="#"><img src="img\FooterNav\Ico_in.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_inst.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_tube.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_tw.svg"></a>
+<a href="#"><img src="img\FooterNav\Ico_fb.svg"></a>
+</div>
+</section>
+<section class="footer-final-container">
+<p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+</section>
+</footer>            
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "practika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roma4ka0/roma4ka1.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roma4ka0/roma4ka1.github.io/issues"
+  },
+  "homepage": "https://github.com/roma4ka0/roma4ka1.github.io#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
