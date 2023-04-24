@@ -7,6 +7,15 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+           navigator.serviceWorker
+           .register('/sw.js')
+           .then(function() {
+               console.log('Service worker registered!');
+           });
+       }
+    </script>
 </head>
 <body>
 <header class="wrapper header">
