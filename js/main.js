@@ -131,14 +131,11 @@ var Application = new Vue({
   });
 
 
-  const cap_btn = document.getElementById("cap_btn");
   const cat_btn = document.getElementById("cat_btn");
-  const dog_btn = document.getElementById("dog_btn");
-  const cap_result = document.getElementById("cap_result");
+  const dog_btn = document.getElementById("dog_btn"); 
   const cat_result = document.getElementById("cat_result");
   const dog_result = document.getElementById("dog_result");
   
-  cap_btn.addEventListener("click", getRandomCap);
   cat_btn.addEventListener("click", getRandomCat);
   dog_btn.addEventListener("click", getRandomDog);
   
