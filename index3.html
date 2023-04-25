@@ -9,15 +9,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
     <script defer src="js/main.js"></script>
     <link rel="manifest" href="manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-           navigator.serviceWorker
-           .register('/sw.js')
-           .then(function() {
-               console.log('Service worker registered!');
-           });
-       }
-    </script>
+
 </head>
 <body >
 <header class="wrapper">
